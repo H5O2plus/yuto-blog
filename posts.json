@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Hello World, Again!",
+        "date": "2020-01-13",
+        "description": "NextJS is a lot more beginner-friendly than GatsbyJS.",
+        "tags": ["short", "hello world"],
+        "filename": "hello-world-again"
+    },
+    {
+        "title": "Dev Post for Testing Features",
+        "date": "3000-01-01",
+        "description": "Testing features new features live!",
+        "tags": ["computer science"],
+        "filename": "dev-page",
+        "hidden": true
+    }
+]
