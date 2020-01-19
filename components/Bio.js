@@ -18,7 +18,10 @@ export default function Bio(props) {
                 marginRight: "1.5em",
                 borderRadius: "15px",
             }}/>
-            <p>
+            <p style={{
+                marginTom: "0",
+                marginBottom: "0",
+            }}>
                 Unpolished showerthoughts, now published online! <br />
                 Written by <strong>{metadata.author.name}</strong>.
                 {` `}

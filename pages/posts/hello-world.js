@@ -2,9 +2,6 @@ import Link from 'next/link';
 import Router from 'next/router'
 
 import "../../styles/theme.css"
-import posts from '../../posts.json'
-import Layout from '../../components/Layout'
-import Header from '../../components/Header'
 import Post from '../../components/Post'
 
 export default function (props) {
@@ -17,10 +14,10 @@ export default function (props) {
     else {
         title = Router.pathname.slice(7);
     }
-
+    //title={typeof window === "undefined" ? }
     return (
-        <Post idname={title} isAnalysisOnly={true} isOriginalOnly={true} isBiased={true}>
-            Dev page.
+        <Post idname={title}>
+            Hello world! This is my first post on my new “blog”. I plan to put whatever is on my mind at the moment here, with minimal editing and proofing.
         </Post>
     )
 }

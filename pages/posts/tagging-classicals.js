@@ -1,11 +1,8 @@
-import Link from 'next/link';
 import Router from 'next/router'
 
 import "../../styles/theme.css"
-import posts from '../../posts.json'
-import Layout from '../../components/Layout'
-import Header from '../../components/Header'
 import Post from '../../components/Post'
+import PostContent from '../../content/tagging-classicals.mdx'
 
 export default function (props) {
     let title;
@@ -17,10 +14,10 @@ export default function (props) {
     else {
         title = Router.pathname.slice(7);
     }
-
+    //title={typeof window === "undefined" ? }
     return (
-        <Post idname={title} isAnalysisOnly={true} isOriginalOnly={true} isBiased={true}>
-            Dev page.
+        <Post idname={title}>
+            <PostContent />
         </Post>
     )
 }

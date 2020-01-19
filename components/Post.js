@@ -5,7 +5,7 @@ import "../styles/theme.css"
 import posts from '../posts.json'
 import Layout from './Layout'
 import Tags from './Tags'
-import { LoadingBubble, ErrorBubble, AnalysisOnlyBubble, OriginalOnlyBubble } from './AlertBubbles'
+import { LoadingBubble, ErrorBubble, AnalysisOnlyBubble, OriginalOnlyBubble, BiasedBubble } from './AlertBubbles'
 import fetcher from '../utils/fetcher'
 
 const Post = props => {
@@ -42,6 +42,7 @@ const Post = props => {
                 <Tags tags={data.tags} />
             </div>
             {props.isAnalysisOnly && <AnalysisOnlyBubble />}
+            {props.isBiased && <BiasedBubble />}
             {props.isOriginalOnly && <OriginalOnlyBubble />}
             {props.children}
         </Layout>

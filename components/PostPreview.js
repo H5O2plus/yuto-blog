@@ -13,7 +13,10 @@ const PostPreview = props => {
             marginBottom: "1.5em",
         }}>
             <header>
-                <h3>
+                <h3 style={{
+                    marginTop: "0",
+                    marginBottom: "0.2em",
+                }}>
                     <Link href={`/posts/${cur.filename}`}>
                         <a>{cur.title}</a>
                     </Link>

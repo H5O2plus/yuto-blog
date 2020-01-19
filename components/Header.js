@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import '../styles/theme.css'
-import metadata from '../metadata.json'
 
 import Bio from './Bio'
 import SiteTitle from './SiteTitle'
@@ -11,7 +10,7 @@ export default function Header(props) {
     return (
         <div>
             <SiteTitle isSiteTitleBig={props.isSiteTitleBig} />
-            {props.isBioTop && <Bio />}
+            {props.showBio && <Bio />}
         </div>
     )
 }

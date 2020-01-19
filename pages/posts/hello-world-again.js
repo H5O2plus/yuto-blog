@@ -20,10 +20,11 @@ export default function (props) {
     //title={typeof window === "undefined" ? }
     return (
         <Post idname={title}>
-            Hello world, again! This is my new platform on which I'll regurgitate interesting ideas that float by during my day-to-day activities.
-            As someone who has experience only in theory and desktop applications, <a href="https://www.gatsbyjs.org/">GatsbyJS</a> had too much of a steep learning curve.
-            I switched to <a href="https://nextjs.org/">NextJS</a>, and so far, everything has been quite intuitive and relatively simple to implement.
-            Over the next few weeks I intend to reimplement my old blog's features and posts here, and of course, new ideas as always. Stay tuned!
+            <p>
+                Hello world, again! This is my new platform on which I'll regurgitate interesting ideas that float by during my day-to-day activities.
+                {` `}<a href="https://www.gatsbyjs.org/">GatsbyJS</a> has a really sharp learning curve, whereas <a href="https://nextjs.org/">NextJS</a> is relatively simpler for those of us like myself who only have experience with theory and lower-level languages.
+                Over the next few weeks I'll reimplement my old blog's features and posts here, and of course, new ideas as always. Stay tuned!
+            </p>
         </Post>
     )
 }

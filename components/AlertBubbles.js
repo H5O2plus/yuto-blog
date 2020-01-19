@@ -2,6 +2,8 @@ import Prism from 'prismjs'
 
 import '../styles/theme.css'
 import '../styles/prism.css'
+import '../components/Quote'
+import Quote from '../components/Quote'
 
 /**
  * Whenever a prerendered page is displayed without content
@@ -41,17 +43,13 @@ export const ErrorBubble = () => {
  */
 export const AnalysisOnlyBubble = () => {
     return (
-        <div className='bubble' style={{
-            backgroundColor: "#FFE3C6",
-            borderColor: "#FFC2B5",
-            color: "#713C00",
+        <div className='bubble bubbleText' style={{
+            backgroundColor: "#fff3cd",
+            borderColor: "#ffeeba",
+            color: "#856404",
         }}>
-            <p className='bubbleText'>
-                <strong style={{ fontWeight: "700" }}>Note:</strong>{` `}
-                The ideas presented in this post do not necessarily reflect the moral principles and beliefs of the author.<br />
-                <q>It is the mark of an educated mind to be able to entertain a thought without accepting it.</q><br />
-                <p style={{textAlign: "right"}}>― Aristotle</p>
-            </p>
+            <strong style={{ fontWeight: "700" }}>Note:</strong>{` `}
+            The ideas presented in this post do not necessarily reflect the moral principles and beliefs of the author.<br />
         </div>
     )
 }
@@ -61,15 +59,29 @@ export const AnalysisOnlyBubble = () => {
  */
 export const OriginalOnlyBubble = () => {
     return (
-        <div className='bubble' style={{
+        <div className='bubble bubbleText' style={{
             backgroundColor: "#f8d7da",
             borderColor: "#f5c6cb",
             color: "#721c24",
         }}>
-            <p className='bubbleText'>
-                <strong style={{ fontWeight: "700" }}>Warning!</strong>{` `}
-                Minimal research in the appropriate fields was done before writing this post. Proceed with caution, and use at your own risk.
-            </p>
+            <strong style={{ fontWeight: "700" }}>Danger!</strong>{` `}
+            Minimal research in the appropriate fields was done before writing this post. Read at your own risk.
+        </div>
+    )
+}
+
+/**
+ * Whenever biased
+ */
+export const BiasedBubble = () => {
+    return (
+        <div className='bubble bubbleText' style={{
+            backgroundColor: "#FFE3C6",
+            borderColor: "#FFC2B5",
+            color: "#713C00",
+        }}>
+            <strong style={{ fontWeight: "700" }}>Warning!</strong>{` `}
+            This post contains opinionated content. Proceed with caution.
         </div>
     )
 }

@@ -13,5 +13,26 @@
         "tags": ["computer science"],
         "filename": "dev-page",
         "hidden": true
+    },
+    {
+        "title": "Hello World!",
+        "date": "2019-07-02",
+        "description": "About my new \"blog\".",
+        "tags": ["short", "hello world"],
+        "filename": "hello-world"
+    },
+    {
+        "title": "Tagging Classical Music using Pop-oriented Standards",
+        "date": "2019-07-14",
+        "description": "How I tag my classical pieces.",
+        "tags": ["music", "computer science"],
+        "filename": "tagging-classicals"
+    },
+    {
+        "title": "New Feature: Post Content Alerts",
+        "date": "2020-01-18",
+        "description": "Clarifying the scope of truth in my thoughts through \"alert bubbles\".",
+        "tags": ["meta"],
+        "filename": "new-post-alerts"
     }
 ]

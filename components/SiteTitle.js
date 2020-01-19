@@ -30,7 +30,10 @@ export default function SiteTitle(props) {
     }
     else {
         return (
-            <h3>{title}</h3>
+            <h3 style={{
+                marginTop: "0",
+                marginBottom: "0",
+            }}>{title}</h3>
         )
     }
 }

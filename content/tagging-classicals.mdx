@@ -1,0 +1,62 @@
+Most music files come with tags (metadata info) to help music players organize music.
+
+For example, the song ["Gucci Gang" by Lil Pump](https://en.wikipedia.org/wiki/Gucci_Gang) might be tagged (not respecting any real standard):
+```
+TITLE: Gucci Gang
+ARTIST: Lil Pump
+ALBUM: Lil Pump
+YEAR: 2017
+COMMENT:
+GENRE: Hip hop; Trap
+```
+There are a few standards for this, and although there are fields to support classical music, in practice, most music players don't bother with fields such as `COMPOSER`, `PERFORMER`, `CONDUCTOR`, `ORCHESTRA`, `KEY`, and so on.
+
+To solve this problem of organizing music, there are 2 solutions.
+1. Use the popular fields instead, repurposing them appropriately.
+    * So put the composer in `ARTIST`, work name in `ALBUM`, movement/section in `TITLE`, etc.
+2. Use/Create a music player that actually supports classical fields
+
+I personally went with the former since I wanted to use popular fully-fledged music players.
+
+So how do I tag in practice? Here is my formatting:
+* `TITLE`
+    * Unique to each file
+    * If the track is part of a larger work (e.g. movement, section, piece, etc.):
+        * `[work name], [mvmt]( - [nickname])`
+    * If the track is a singular piece:
+        * `[piece name]`
+    * If the track is an excerpt from a larger work:
+        * `[excerpt name] from [work name]`
+    * The `[mvmt]` field takes the following forms:
+        * `Mvmt. [#]` for movements
+        * `Sec. [#]` for sections
+        * `Pt. [#]` for parts
+        * `Tab. [#]` for parts but in French (Tableau)
+        * `[#]` for pieces
+        * `Act [#] Scene [#]` for operas
+        * `Pt. [#] Ep. [#]` for certain ballets
+            * `Ep.` = Episode
+    * For recordings where movements/sections are split across multiple tracks, use:
+        * `Sec. 1 Pt. 1`, `Sec. 1 Pt. 2`, etc.
+    * E.g.
+        * `Symphony No. 1, Mvt. 1 – Allegro`
+        * `Arabesque No. 1`
+        * `Ma mère l'Oye, Mvt. 2 - Tableau I: Danse du rouet et scène - Interlude`
+* `ARTIST`
+    * `[composer last name]`
+* `ALBUM`
+    * Represents a work or a singular piece
+    * `[work/group name]( in [key])(, [opus # or equivalent])( - [nickname])`
+    * E.g.
+        * `Symphony No. 5 in D minor, Op. 107 – Reformation`
+        * `Deux arabesques, L. 66`
+        * `Syrinx, L. 129`
+        * `Symphony No. 40 in G minor, K. 550`
+        * `Ma mère l'Oye, M. 62 - Mother Goose`
+* `ALBUM ARTIST`
+    * If the work is played by an orchestra:
+        * `[orchestra name]`
+    * If the work is played by a soloist:
+        * `[soloist name]`
+* Filename
+    * `%ARTIST% %TITLE%`

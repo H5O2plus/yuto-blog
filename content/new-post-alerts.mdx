@@ -1,0 +1,32 @@
+import Quote from '../components/Quote'
+import { AnalysisOnlyBubble, OriginalOnlyBubble, BiasedBubble } from '../components/AlertBubbles.js'
+
+At some point, I'll probably write about content that is heavily biased. I already have a few ideas for things that I have done no research on.
+For posts like these where the quality of the truthfulness might be low, I'll add "bubbles" into the articles.
+
+## Analysis-Only Bubble
+For example, whenever the post is controversial, I insert this:
+
+<AnalysisOnlyBubble />
+
+This alert reminded me of an iconic phrase stated by a famous greek philospher.
+
+<Quote author="Aristotle">It is the mark of an educated mind to be able to entertain a thought without accepting it.</Quote>
+
+The point is, I like to explore highly radical ideas, including those that are not taken very well by most people today.
+I hope this will reassure you (readers) that I myself do not necessarily support them; I write about it only because they are quite interesting.
+
+## Biased Bubble
+Opinionated articles will be headed with:
+
+<BiasedBubble />
+
+I'll only use this whenever I assert something is somehow greater in some attribute than something else without justifying it.
+
+## Original-Only Bubble
+It takes time to properly fact-check everything I state, and I intend this "blog" to be for only free-style thought with little to no editing involved.
+Whenever I write about something with potentially false information, I'll insert this:
+
+<OriginalOnlyBubble />
+
+However, the lack of this alert does not necessarily guarantee that everything is true, so be sure to use your own judgement.
