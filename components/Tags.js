@@ -10,18 +10,16 @@ const Tags = props => {
             {props.tags.map((tagText) => {
                 return (
                     <Link href={`/tags?tag=${tagText}`}>
-                        <small>
+                        <small style={{
+                            color: "#444",
+                            backgroundColor: "#DDD",
+                            paddingLeft: "0.4em",
+                            paddingRight: "0.4em",
+                            marginRight: "0.5em",
+                            cursor: "pointer",
+                            whiteSpace: "pre",
+                        }}>
                             {tagText}
-                            <style jsx>{`
-                                small {
-                                    color: #444;
-                                    background-color: #DDD;
-                                    padding-left: 0.4em;
-                                    padding-right: 0.4em;
-                                    margin-right: 0.5em;
-                                    cursor: pointer;
-                                }
-                            `}</style>
                         </small>
                     </Link>
                 )
